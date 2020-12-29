@@ -72,9 +72,7 @@
 
 kfm, stages/kfm.def
 kfm720, stages/kfm.def
-elmen, stages/kfm.def
-UncleJogel, stages/kfm.def
-kusanagi, stages/kfm.def
+Nox, stages/kfm.def
 
 ;-----------------------
 [ExtraStages]

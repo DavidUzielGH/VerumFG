@@ -1,4 +1,4 @@
-﻿; The CMD file.
+; The CMD file.
 ;
 ; Two parts: 1. Command definition and  2. State entry
 ; (state entry is after the commands def section)
@@ -293,6 +293,11 @@ command = x
 time = 1
 
 [Command]
+name = "xx"
+command = x, x
+time = 38	
+
+[Command]
 name = "y"
 command = y
 time = 1
@@ -401,7 +406,6 @@ trigger2 = hitdefattr = SC, NA, SA, HA
 trigger2 = stateno != [3000,3050)
 trigger2 = movecontact
 trigger3 = stateno = 1310 || stateno = 1330 ;From blocking
-
 
 ;===========================================================================
 ;This is not a move, but it sets up var(1) to be 1 if conditions are right
@@ -614,11 +618,11 @@ triggerall = statetype = S
 triggerall = ctrl
 triggerall = stateno != 100
 trigger1 = command = "holdfwd"
-trigger1 = p2bodydist X < 3
+trigger1 = p2bodydist X < 12
 trigger1 = (p2statetype = S) || (p2statetype = C)
 trigger1 = p2movetype != H
 trigger2 = command = "holdback"
-trigger2 = p2bodydist X < 5
+trigger2 = p2bodydist X < 20
 trigger2 = (p2statetype = S) || (p2statetype = C)
 trigger2 = p2movetype != H
 
@@ -626,8 +630,20 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-;Stand Light Punch
-[State -1, Stand Light Punch]
+;Rekka 2
+[State -1, Rekka 2]
+type = ChangeState
+value = 201
+triggerall = command = "xx"
+triggerall = command != "holddown"
+triggerall = stateno = 200
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = time > 10
+
+;---------------------------------------------------------------------------
+;Rekka 1
+[State -1, Rekka 1]
 type = ChangeState
 value = 200
 triggerall = command = "x"
@@ -635,8 +651,7 @@ triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 trigger2 = stateno = 200
-trigger2 = time > 6
-
+trigger2 = time > 27
 ;---------------------------------------------------------------------------
 ;Stand Strong Punch
 [State -1, Stand Strong Punch]
