@@ -70,30 +70,30 @@ Initializing stage...
 Stage initialized OK
 Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
-  Loading cmd command set nox.cmd...OK
-  Loading cns nox.cns...OK
-  Loading cmd state entry nox.cmd...OK
+  Loading cmd command set kfm.cmd...OK
+  Loading cns kfm.cns...OK
+  Loading cmd state entry kfm.cmd...OK
   Loading common states common1.cns...OK
   Unloading command names...OK
-  Loading sff nox.sff...OK
-  Loading anim nox.air...OK
-  Loading snd nox.snd...OK
+  Loading sff kfm.sff...OK
+  Loading anim kfm.air...OK
+  Loading snd kfm.snd...OK
   Loading pals...OK
-  Loading learned AI nox.ai...OK
-  3050 expressions (988 on trigger lines)
+  Loading learned AI kfm.ai...OK
+  3009 expressions (979 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 23.44s
-Total frames: 1407 	Skipped frames: 37
-Avg game rate: 60.03
-Avg frame rate: 58.45
+Total time: 2.84s
+Total frames: 171 	Skipped frames: 9
+Avg game rate: 60.21
+Avg frame rate: 57.04
 
 Returned from main loop
 Deinitializing...
-Frames      : 1407
-Time elapsed: 23.540 sec
-ticks: 2354, tps: 100, start 218, end 2572
+Frames      : 171
+Time elapsed: 2.910 sec
+ticks: 291, tps: 100, start 48, end 339
 
 Clearing player cache...OK
 Freeing character info...OK

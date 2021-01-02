@@ -567,7 +567,7 @@ sparkno = 0
 sparkxy = -40,-168
 hitsound   = 5,0
 guardsound = 6,0
-ground.type = Low
+ground.type = High
 ground.slidetime = 6
 ground.hittime  = 9
 ground.velocity = -16
@@ -575,7 +575,7 @@ air.velocity = -6,-12
 
 [State 400, 3]
 type = CtrlSet
-trigger1 = Time = 6
+trigger1 = Time = 30
 value = 1
 
 [State 400, 4]
