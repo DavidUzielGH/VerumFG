@@ -661,8 +661,7 @@ triggerall = command = "y"
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
-trigger2 = (stateno = 200) && time > 5
-trigger3 = (stateno = 230) && time > 6
+trigger3 = time > 6
 
 ;---------------------------------------------------------------------------
 ;Stand Light Kick
@@ -716,8 +715,6 @@ triggerall = command = "y"
 triggerall = command = "holddown"
 trigger1 = statetype = C
 trigger1 = ctrl
-trigger2 = (stateno = 400) || (stateno = 430)
-trigger2 = (time > 9) || (movecontact && time > 5)
 
 ;---------------------------------------------------------------------------
 ;Crouching Light Kick
@@ -728,8 +725,7 @@ triggerall = command = "a"
 triggerall = command = "holddown"
 trigger1 = statetype = C
 trigger1 = ctrl
-trigger2 = (stateno = 400) || (stateno = 430)
-trigger2 = (time > 9) || (movecontact && time > 5)
+trigger2 = (time > 30) || (movecontact && time > 30)
 
 ;---------------------------------------------------------------------------
 ;Crouching Strong Kick
@@ -740,8 +736,6 @@ triggerall = command = "b"
 triggerall = command = "holddown"
 trigger1 = statetype = C
 trigger1 = ctrl
-trigger2 = (stateno = 400) || (stateno = 430)
-trigger2 = (time > 9) || (movecontact && time > 5)
 
 ;---------------------------------------------------------------------------
 ;Jump Light Punch
