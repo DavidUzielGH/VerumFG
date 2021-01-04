@@ -1,4 +1,4 @@
- ; The CMD file.
+; The CMD file.
 ;
 ; Two parts: 1. Command definition and  2. State entry
 ; (state entry is after the commands def section)
@@ -295,7 +295,7 @@ time = 1
 [Command]
 name = "xx"
 command = x, x
-time = 30	
+time = 38	
 
 [Command]
 name = "y"
@@ -630,29 +630,31 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-;5A Rekka 2
+;Rekka 2
 [State -1, Rekka 2]
 type = ChangeState
 value = 201
-triggerall = command = "x"
+triggerall = command = "xx"
 triggerall = command != "holddown"
+triggerall = stateno = 200
 trigger1 = statetype = S
-trigger1 = stateno = 200
-trigger1 = Time > 17
+trigger1 = ctrl
+trigger2 = time > 10
+
 ;---------------------------------------------------------------------------
-;5A Rekka 1
+;Rekka 1
 [State -1, Rekka 1]
 type = ChangeState
 value = 200
 triggerall = command = "x"
 triggerall = command != "holddown"
-triggerall = stateno != 200
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = stateno = 200
 trigger2 = time > 27
 ;---------------------------------------------------------------------------
-;5B
-[State -1, Low Kick]
+;Stand Strong Punch
+[State -1, Stand Strong Punch]
 type = ChangeState
 value = 210
 triggerall = command = "y"
@@ -662,7 +664,7 @@ trigger1 = ctrl
 trigger3 = time > 6
 
 ;---------------------------------------------------------------------------
-;5C Bullet Fire Thing
+;Stand Light Kick
 [State -1, Stand Light Kick]
 type = ChangeState
 value = 230
@@ -670,7 +672,8 @@ triggerall = command = "a"
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
-trigger2 = Time > 7
+trigger2 = (stateno = 200) && time > 7
+trigger3 = (stateno = 230) && time > 9
 
 ;---------------------------------------------------------------------------
 ;Standing Strong Kick
