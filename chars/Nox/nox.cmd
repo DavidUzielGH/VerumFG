@@ -630,15 +630,16 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
+;REKKA, TODO: haven't taken into account the frame data
 ;5A Rekka 2
-[State -1, Rekka 2]
+[State -1, Rekka 2] ;Basically, you can only do Rekka 2 if..
 type = ChangeState
 value = 201
-triggerall = command = "x"
-triggerall = command != "holddown"
-trigger1 = statetype = S
-trigger1 = stateno = 200
-trigger1 = Time > 17
+triggerall = command = "x" ;You receive the appropiate command button and
+triggerall = command != "holddown" ;The button is not held down. Then, we evaluate if
+trigger1 = statetype = S ; You're standing and
+trigger1 = stateno = 200 ; You're coming from Rekka 1 and
+trigger1 = Time > 17 ;You've been on Rekka 1 for longer than 17 ticks.
 ;---------------------------------------------------------------------------
 ;5A Rekka 1
 [State -1, Rekka 1]
@@ -652,20 +653,20 @@ trigger1 = ctrl
 trigger2 = time > 27
 ;---------------------------------------------------------------------------
 ;5B
-[State -1, Low Kick]
+[State -1, Low Kick] ;Ya, it's a low kick, not much to it.
 type = ChangeState
 value = 210
 triggerall = command = "y"
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
-trigger3 = time > 6
+trigger3 = time > 7
 
 ;---------------------------------------------------------------------------
-;5C Bullet Fire Thing
-[State -1, Stand Light Kick]
+;5C Fire Thing
+[State -1, Bullet Clash]
 type = ChangeState
-value = 230
+value = 240
 triggerall = command = "a"
 triggerall = command != "holddown"
 trigger1 = statetype = S

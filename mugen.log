@@ -80,20 +80,20 @@ Loading character chars/ff3_0/ff3_0.def...
   Loading snd nox.snd...OK
   Loading pals...OK
   Loading learned AI nox.ai...OK
-  1138 expressions (617 on trigger lines)
+  1144 expressions (619 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 12.62s
-Total frames: 758 	Skipped frames: 8
-Avg game rate: 60.06
-Avg frame rate: 59.43
+Total time: 14.08s
+Total frames: 845 	Skipped frames: 16
+Avg game rate: 60.01
+Avg frame rate: 58.88
 
 Returned from main loop
 Deinitializing...
-Frames      : 758
-Time elapsed: 12.700 sec
-ticks: 1270, tps: 100, start 45, end 1315
+Frames      : 845
+Time elapsed: 14.140 sec
+ticks: 1414, tps: 100, start 45, end 1459
 
 Clearing player cache...OK
 Freeing character info...OK
