@@ -141,7 +141,6 @@ juggle = 1
 ctrl = 0
 anim = 200
 velset = 26,0
-poweradd = 10
 sprpriority = 2
 
 [State 200, 1] ;THESE ARE THE ESSENTIALS
@@ -166,6 +165,7 @@ airguard.velocity = -7.6,-3.2
 air.type = High
 air.velocity = -5.6,-12
 air.hittime = 15
+getpower = 100, 50 ;As an example, here's how we make guarded moves add less power
 
 [State 200, 2]
 type = PlaySnd
@@ -268,7 +268,7 @@ trigger1 = AnimTime = 0
 value = 0
 ctrl = 1
 
-[Statedef 240]
+[Statedef 240];5C Flame thing
 type = S
 movetype = A
 physics = S
@@ -287,6 +287,45 @@ damage = 3
 animtype = Light
 hitflag = MAF
 guardflag = LA
+priority = 3, Hit
+pausetime = 8, 8
+sparkno = 0
+sparkxy = -80, -100
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime = 5
+
+[State 240, 2]
+type = PlaySnd
+trigger1 = Time = 5
+value = 0, 0
+
+[State 240, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[Statedef 250];5D Slash
+type = S
+movetype = A
+physics = S
+juggle = 1
+ctrl = 0
+anim = 250
+velset = 10, 0
+poweradd = 10
+
+[State 250, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 5
+animtype = Medium
+hitflag = MAF
+guardflag = MA
 priority = 3, Hit
 pausetime = 8, 8
 sparkno = 0

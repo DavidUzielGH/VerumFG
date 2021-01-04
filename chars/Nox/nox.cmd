@@ -674,16 +674,15 @@ trigger1 = ctrl
 trigger2 = Time > 7
 
 ;---------------------------------------------------------------------------
-;Standing Strong Kick
+;5D Slash Attack
 [State -1, Standing Strong Kick]
 type = ChangeState
-value = 240
+value = 250
 triggerall = command = "b"
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
-trigger2 = (stateno = 200) && time > 5
-trigger3 = (stateno = 230) && time > 6
+trigger1 = time > 6
 
 ;---------------------------------------------------------------------------
 ;Taunt
