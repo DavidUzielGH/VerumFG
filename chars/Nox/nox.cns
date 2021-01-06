@@ -152,7 +152,7 @@ animtype = Light ;This is the kind of animation P2 will play on hit
 hitflag = MAF
 guardflag = MA
 priority = 3, Hit
-pausetime = 8, 8
+pausetime = 3, 3
 sparkno = 0
 sparkxy = -40, -304
 hitsound = 5, 0
@@ -175,7 +175,7 @@ value = 0, 0
 [State 200, 3]
 type = ChangeState
 trigger1 = AnimTime = 0
-value = 0
+value = 201
 ctrl = 1
 
 [Statedef 201];REKKAAAAAAAAA 2
@@ -205,7 +205,7 @@ hitsound = 5, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
-ground.hittime = 10
+ground.hittime = 20
 ground.velocity = -16
 airguard.velocity = -7.6,-3.2
 air.type = High
@@ -342,6 +342,96 @@ trigger1 = Time = 5
 value = 0, 0
 
 [State 240, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[Statedef 400]
+type = C
+movetype = A
+physics = C
+juggle = 1
+ctrl = 0
+anim = 400
+velset = 0, 0
+poweradd = 10
+
+[State 400, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = C, NA
+damage = 5
+animtype = Light
+hitflag = MAF
+guardflag = MA
+priority = 3, Hit
+pausetime = 8, 8
+sparkno = 0
+sparkxy = -80, -100
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime = 1
+
+[State 400, 2]
+type = PlaySnd
+trigger1 = Time = 14
+value = 0, 0
+
+[State 400, 3]
+type = Width
+trigger1 = AnimElemTime(0) >= 0 && AnimElemTime(3) <= 0
+value = 50, 0
+
+[State 400, 4]
+type = Width
+trigger1 = AnimElemTime(4) >= 0 && AnimElemTime(12) <= 0
+value = 100, 0
+
+
+[State 400, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[Statedef 410]
+type = S
+movetype = A
+physics = C
+juggle = 1
+ctrl = 0
+anim = 410
+velset = 0, 0
+poweradd = 10
+
+[State 410, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger2 = AnimElem = 5
+attr = C, NA
+damage = 5
+animtype = Medium
+hitflag = MAF
+guardflag = HA
+priority = 3, Hit
+pausetime = 8, 8
+sparkno = 0
+sparkxy = -80, -100
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime = 1
+
+[State 410, 2]
+type = PlaySnd
+trigger1 = Time = 12
+value = 0, 0
+
+[State 410, 3]
 type = ChangeState
 trigger1 = AnimTime = 0
 value = 0

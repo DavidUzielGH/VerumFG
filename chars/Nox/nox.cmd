@@ -422,11 +422,10 @@ type = VarSet
 trigger1 = statetype != A
 trigger1 = ctrl
 trigger2 = (stateno = [200,299]) || (stateno = [400,499])
-trigger2 = stateno != 440 ;Except for sweep kick
 trigger2 = movecontact
 trigger3 = stateno = 1310 || stateno = 1330 ;From blocking
 var(1) = 1
-
+;if (notA && ctrl) || ((state = [200,299]) || (stateno = [400,499]) && stateno != 440 && movecontact) || (stateno = 1310 || stateno = 1330)
 ;---------------------------------------------------------------------------
 ;Fast Kung Fu Knee (1/3 super bar)
 [State -1, Fast Kung Fu Knee]
@@ -611,7 +610,7 @@ trigger1 = ctrl
 ;---------------------------------------------------------------------------
 ;Kung Fu Throw
 [State -1, Kung Fu Throw]
-type = ChangeState
+type = NULL
 value = 800
 triggerall = command = "y"
 triggerall = statetype = S
@@ -630,38 +629,25 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-;REKKA, TODO: haven't taken into account the frame data
-;5A Rekka 2
-[State -1, Rekka 2] ;Basically, you can only do Rekka 2 if..
+;5A Low Kick
+[State -1, Low Kick] ;Ya, it's a low kick, not much to it.
 type = ChangeState
-value = 201
-triggerall = command = "x" ;You receive the appropiate command button and
-triggerall = command != "holddown" ;The button is not held down. Then, we evaluate if
-trigger1 = statetype = S ; You're standing and
-trigger1 = stateno = 200 ; You're coming from Rekka 1 and
-trigger1 = Time > 17.5 ;You've been on Rekka 1 for longer than 17 ticks.
+value = 210
+triggerall = command = "x"
+triggerall = command != "holddown"
+trigger1 = statetype = S
+trigger1 = ctrl
 ;---------------------------------------------------------------------------
-;5A Rekka 1
-[State -1, Rekka 1]
+;5B Elbow Punch
+[State -1, Elbow Punch]
 type = ChangeState
 value = 200
-triggerall = command = "x"
+triggerall = command = "y"
 triggerall = command != "holddown"
 triggerall = stateno != 200
 trigger1 = statetype = S
 trigger1 = ctrl
-trigger2 = time > 27
-;---------------------------------------------------------------------------
-;5B
-[State -1, Low Kick] ;Ya, it's a low kick, not much to it.
-type = ChangeState
-value = 210
-triggerall = command = "y"
-triggerall = command != "holddown"
-trigger1 = statetype = S
-trigger1 = ctrl
-trigger3 = time > 7
-
+trigger2 = stateno = 400
 ;---------------------------------------------------------------------------
 ;5C Fire Thing
 [State -1, Bullet Clash]
@@ -671,6 +657,7 @@ triggerall = command = "a"
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = stateno = 201 && Time > 2
 
 ;---------------------------------------------------------------------------
 ;5D Slash Attack
@@ -681,7 +668,8 @@ triggerall = command = "b"
 triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
-trigger1 = time > 6
+trigger2 = stateno = 201 && time > 2 ;Gatling from 5B
+trigger3 = stateno = 210 && time > 0 ;Gatling from 5A
 
 ;---------------------------------------------------------------------------
 ;Taunt
@@ -693,8 +681,8 @@ trigger1 = statetype != A
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-;Crouching Light Punch
-[State -1, Crouching Light Punch]
+;2A Crouching Punch
+[State -1, Crouching Punch]
 type = ChangeState
 value = 400
 triggerall = command = "x"
@@ -703,7 +691,7 @@ trigger1 = statetype = C
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-;Crouching Strong Punch
+;2B STOMP
 [State -1, Crouching Strong Punch]
 type = ChangeState
 value = 410
@@ -711,6 +699,7 @@ triggerall = command = "y"
 triggerall = command = "holddown"
 trigger1 = statetype = C
 trigger1 = ctrl
+trigger2 = stateno = 210
 
 ;---------------------------------------------------------------------------
 ;Crouching Light Kick
