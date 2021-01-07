@@ -692,7 +692,7 @@ trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
 ;2B STOMP
-[State -1, Crouching Strong Punch]
+[State -1, Stomp]
 type = ChangeState
 value = 410
 triggerall = command = "y"
@@ -702,28 +702,29 @@ trigger1 = ctrl
 trigger2 = stateno = 210
 
 ;---------------------------------------------------------------------------
-;Crouching Light Kick
-[State -1, Crouching Light Kick]
+;2C Sweep
+[State -1, Tail Sweep]
 type = ChangeState
 value = 430
 triggerall = command = "a"
 triggerall = command = "holddown"
 trigger1 = statetype = C
 trigger1 = ctrl
-trigger2 = (time > 30) || (movecontact && time > 30)
+trigger2 = stateno = 400 
 
 ;---------------------------------------------------------------------------
-;Crouching Strong Kick
-[State -1, Crouching Strong Kick]
+;2D Stab
+[State -1, Stab]
 type = ChangeState
 value = 440
 triggerall = command = "b"
 triggerall = command = "holddown"
 trigger1 = statetype = C
 trigger1 = ctrl
+trigger2 = stateno = 240
 
 ;---------------------------------------------------------------------------
-;Jump Light Punch
+;8A
 [State -1, Jump Light Punch]
 type = ChangeState
 value = 600
