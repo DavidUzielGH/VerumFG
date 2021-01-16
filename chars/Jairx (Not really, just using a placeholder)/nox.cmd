@@ -594,7 +594,7 @@ trigger1 = var(1) ;Use combo condition (above)
 ;Run Fwd
 [State -1, Run Fwd]
 type = ChangeState
-value = 100
+value = 196
 trigger1 = command = "FF"
 trigger1 = statetype = S
 trigger1 = ctrl

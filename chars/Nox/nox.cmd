@@ -736,15 +736,13 @@ trigger3 = stateno = 1350 ;Air blocking
 
 ;---------------------------------------------------------------------------
 ;8B
-[State -1, Strong Air Kick]
+[State -1, Front Kick]
 type = ChangeState
 value = 610
 triggerall = command = "y"
 trigger1 = statetype = A
 trigger1 = ctrl
-trigger2 = stateno = 600 || stateno = 630 ;jump_x or jump_a
-trigger2 = movecontact
-trigger3 = stateno = 1350 ;Air blocking
+trigger2 = stateno = 600
 
 ;---------------------------------------------------------------------------
 ;Jump Light Kick

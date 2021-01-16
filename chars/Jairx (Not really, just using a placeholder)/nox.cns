@@ -124,6 +124,35 @@ victory7 = "なんだと！彼女はここにもいないと？"
 
 
 ;---------------------------------------------------------------------------
+[Statedef 196]
+type = S
+ctrl = 0
+anim = 1
+velset = 0, 0
+
+[State 196, 1]
+type = ChangeState
+trigger1 = AnimElem = 8
+value = 197
+
+[Statedef 197]
+type = S
+ctrl = 0
+anim = 0
+velset = 0, 0
+
+[State 197, 1]
+type = PosAdd
+trigger1 = Time = 0
+x = floor(p2dist X+10)
+y = floor(p2dist Y)
+
+[State 197, 2]
+type = ChangeState
+trigger1 = Time = 0
+value = 0
+
+;---------------------------------------------------------------------------
 ; Lose by Time Over
 ; CNS difficulty: basic
 [Statedef 170]
@@ -137,7 +166,6 @@ type = NotHitBy
 trigger1 = 1
 value = SCA
 time = 1
-
 ;---------------------------------------------------------------------------
 ; Win state decider
 ; CNS difficulty: basic

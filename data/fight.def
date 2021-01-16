@@ -1,4 +1,4 @@
-﻿; Definition of fight screen
+; Definition of fight screen
 
 ; *** DO NOT MODIFY OR OVERWRITE THIS FILE ***
 ; To customize, make a copy of this file in a subdirectory of your
@@ -23,13 +23,13 @@
 ;3. your MUGEN directory
 
 [Files]
-sff = NBCFX.sff
+sff = fight.sff
 snd = fight.snd
 font1 = jg.fnt
 font2 = num1.fnt
 font3 = name1.fnt
-fightfx.sff = NBCFX.sff
-fightfx.air = NBCFX.air
+NBCFX.sff = NBCFX.sff
+NBCFX.air = NBCFX.air
 common.snd = common.snd
 
 ;-----------------------------------------------------------

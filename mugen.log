@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\Usuario\Desktop\David\Mugen\mugen\mugen.exe
+Command line: C:\Users\Usuario\Desktop\David\Mugen\mugen\mugen.exe ff3_0 ff3_0
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -61,29 +61,14 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Initializing select screen...finding characters...OK
+Playing quick VS.
 
 Entering main loop
-Entering character select.
-attempting load and start...no BGM...Initializing stage...
+Initializing stage...
   Loading BG...OK
   Allocating helpers...OK
 Stage initialized OK
-Loading character chars/kfm/kfm.def...
-  Loading info...OK
-  Loading cmd command set kfm.cmd...OK
-  Loading cns kfm.cns...OK
-  Loading cmd state entry kfm.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff kfm.sff...OK
-  Loading anim kfm.air...OK
-  Loading snd kfm.snd...OK
-  Loading pals...OK
-  Loading learned AI kfm.ai...OK
-  3009 expressions (979 on trigger lines)
-Character kfm.def loaded OK
-Loading character chars/Nox/Nox.def...
+Loading character chars/ff3_0/ff3_0.def...
   Loading info...OK
   Loading cmd command set nox.cmd...OK
   Loading cns nox.cns...OK
@@ -95,25 +80,23 @@ Loading character chars/Nox/Nox.def...
   Loading snd nox.snd...OK
   Loading pals...OK
   Loading learned AI nox.ai...OK
-  1314 expressions (637 on trigger lines)
-Character Nox.def loaded OK
+  1339 expressions (638 on trigger lines)
+Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 0.45s
-Total frames: 28 	Skipped frames: 0
-Avg game rate: 62.22
-Avg frame rate: 62.22
+Total time: 18.85s
+Total frames: 1132 	Skipped frames: 9
+Avg game rate: 60.05
+Avg frame rate: 59.58
 
-Entering character select.
-attempting load and start...no BGM...Returned from main loop
+Returned from main loop
 Deinitializing...
-Frames      : 28
-Time elapsed: 14.680 sec
-ticks: 1468, tps: 100, start 50, end 1518
+Frames      : 1132
+Time elapsed: 18.930 sec
+ticks: 1893, tps: 100, start 48, end 1941
 
 Clearing player cache...OK
 Freeing character info...OK
-Freeing select screen...OK
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
