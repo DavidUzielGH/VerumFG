@@ -392,6 +392,15 @@ trigger2 = stateno != [3050,3100)
 trigger2 = movecontact
 trigger3 = stateno = 1310 || stateno = 1330 ;From blocking
 
+[State -1, Jump Cancel]
+type = ChangeState
+value = 40
+triggerall = command = "holdup"
+triggerall = statetype = S
+trigger1 = ctrl
+trigger2 = stateno = 250
+trigger2 = movecontact
+
 ;---------------------------------------------------------------------------
 ;Triple Kung Fu Palm (uses one super bar)
 [State -1, Triple Kung Fu Palm]
@@ -743,16 +752,19 @@ triggerall = command = "y"
 trigger1 = statetype = A
 trigger1 = ctrl
 trigger2 = stateno = 600
+trigger3 = stateno = 1350 ;Air blocking
 
 ;---------------------------------------------------------------------------
-;Jump Light Kick
-[State -1, Jump Light Kick]
+;8C
+[State -1, Spin Kick]
 type = ChangeState
 value = 630
 triggerall = command = "a"
 trigger1 = statetype = A
 trigger1 = ctrl
-trigger2 = stateno = 1350 ;Air blocking
+trigger2 = stateno = 610
+trigger3 = stateno = 640
+trigger4 = stateno = 1350 ;Air blocking
 
 ;---------------------------------------------------------------------------
 ;Jump Strong Kick

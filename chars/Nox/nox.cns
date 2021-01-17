@@ -603,12 +603,42 @@ guard.hittime = 8
 air.velocity = -5.2, -12
 air.hittime = 14
 
-[State 600, 2]
+[State 610, 2]
 type = PlaySnd
 trigger1 = AnimElem = 5
 value = 0, 0
 
-[State 600, 3]
+[State 610, 3]
 type = CtrlSet
 trigger1 = AnimTime = 11
 value = 1
+
+[Statedef 640]
+type = A
+movetype = A
+physics = A
+juggle = 1
+ctrl = 0
+anim = 640
+poweradd = 10
+
+[State 640, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = A, NA
+damage = 5
+animtype = Light
+hitflag = MAF
+guardflag = MA
+priority = 3, Hit
+pausetime = 8, 8
+sparkno = 0
+sparkxy = -80, -100
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime = 10
+guard.hittime = 8
+air.velocity = -5.2, -12
+air.hittime = 14
