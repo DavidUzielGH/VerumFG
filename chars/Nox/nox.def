@@ -16,7 +16,6 @@ localcoord = 1280,720       	;Local coordinate space width and height
 [Files]
 cmd     = nox.cmd        ;Command set
 cns     = nox.cns        ;Constants
-cns     = nox2.cns        ;Constants
 st      = nox.cns        ;States
 stcommon = common1.cns      ;Common states (from data/ or motif)
 sprite  = nox.sff        ;Sprite

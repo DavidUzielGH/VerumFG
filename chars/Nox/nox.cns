@@ -10,7 +10,7 @@ liedown.time = 60
 airjuggle = 30
 
 ;Effect for receiving attacks
-sparkno = 2
+sparkno = 10
 ;Effect for defending from atts
 guard.sparkno = 40
 

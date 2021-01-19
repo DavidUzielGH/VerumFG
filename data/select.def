@@ -72,7 +72,6 @@
 
 kfm, stages/kfm.def
 kfm720, stages/kfm.def
-Nox, stages/kfm.def
 
 ;-----------------------
 [ExtraStages]

@@ -28,13 +28,13 @@ snd = fight.snd
 font1 = jg.fnt
 font2 = num1.fnt
 font3 = name1.fnt
-NBCFX.sff = NBCFX.sff
-NBCFX.air = NBCFX.air
+fightfx.sff = fightfx_customhires.sff
+fightfx.air = fightfx_customhires.air
 common.snd = common.snd
 
 ;-----------------------------------------------------------
 [FightFx]
-scale = 1
+scale = 0.5
 
 ;-----------------------------------------------------------
 [Lifebar]

@@ -16,7 +16,7 @@ Opened mixer with parameters (44100, 16, 2, 2048)...
 OK
 Initializing BGM...BGMThreadInit returned 0
 OK
-Initializing graphics...gameCoord 1920x1080...render mode 0_0...trying 1920x1080x16 mode 0x0...success...OK
+Initializing graphics...gameCoord 1920x1080...render mode 0_4...trying 1920x1080x16 mode 0x0...success...OK
 Setting callbacks...OK
 Initializing font...OK
 Initializing game variables...OK
@@ -80,20 +80,20 @@ Loading character chars/ff3_0/ff3_0.def...
   Loading snd nox.snd...OK
   Loading pals...OK
   Loading learned AI nox.ai...OK
-  1370 expressions (647 on trigger lines)
+  3061 expressions (986 on trigger lines)
 Character ff3_0.def loaded OK
 Start of game loop
 End of game loop
-Total time: 156.46s
-Total frames: 9388 	Skipped frames: 17
-Avg game rate: 60.00
-Avg frame rate: 59.89
+Total time: 35.28s
+Total frames: 2091 	Skipped frames: 518
+Avg game rate: 59.27
+Avg frame rate: 44.59
 
 Returned from main loop
 Deinitializing...
-Frames      : 9388
-Time elapsed: 156.550 sec
-ticks: 15655, tps: 100, start 46, end 15701
+Frames      : 2091
+Time elapsed: 35.440 sec
+ticks: 3544, tps: 100, start 263, end 3807
 
 Clearing player cache...OK
 Freeing character info...OK
