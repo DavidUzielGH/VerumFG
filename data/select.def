@@ -70,7 +70,7 @@
  ;
  ;Insert your characters below.
 
-kfm, stages/kfm.def
+nox, stages/kfm.def
 kfm720, stages/kfm.def
 
 ;-----------------------
